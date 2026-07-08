@@ -1,0 +1,16 @@
+{
+  "detection": {
+    "port_scan_threshold": 15,
+    "port_scan_window_seconds": 5,
+    "syn_flood_threshold": 50,
+    "syn_flood_window_seconds": 5
+  },
+  "logging": {
+    "log_file": "ids_alerts.log",
+    "max_log_bytes": 1000000,
+    "log_backup_count": 3
+  },
+  "capture": {
+    "interface": null
+  }
+}
