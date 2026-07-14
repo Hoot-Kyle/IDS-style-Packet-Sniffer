@@ -35,7 +35,8 @@ Alerting: Python's logging module writes alerts to both console and a rotating l
 Installation:
 Requires Python 3 and Scapy.
 
-bashpip3 install scapy --break-system-packages
+(bash)
+pip3 install scapy --break-system-packages
 
 Raw socket access requires elevated privileges, so the script must be run with sudo.
 
@@ -52,35 +53,13 @@ sudo python3 ids_sniffer.py -i en0 -v
 
 To find your interface name on macOS: ifconfig.
 
-Configuration:
-Detection thresholds, logging behavior, and the default interface are set in config.json:
-
-json{
-  "detection": {
-    "port_scan_threshold": 15,
-    "port_scan_window_seconds": 5,
-    "syn_flood_threshold": 50,
-    "syn_flood_window_seconds": 5
-  },
-  "logging": {
-    "log_file": "ids_alerts.log",
-    "max_log_bytes": 1000000,
-    "log_backup_count": 3
-  },
-  "capture": {
-    "interface": null
-  }
-}
-
-If config.json is missing or contains invalid JSON, the script falls back to built-in defaults and prints a warning.
-
 Testing:
 Do not test against machines or networks you don't own or have explicit permission to test.
 
-# Terminal 1
+ Terminal 1
 sudo python3 ids_sniffer.py -i en0
 
-# Terminal 2 — simulate a port scan against yourself
+ Terminal 2 — simulate a port scan against yourself
 nmap -p 1-100 localhost
 
 Example alert output:
