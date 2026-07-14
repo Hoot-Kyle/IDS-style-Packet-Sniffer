@@ -1,2 +1,2 @@
 # IDS-style-Packet-Sniffer
-I asked Claude to help build me an IDS-style packet sniffer from scratch to have a "look under the hood" experience to learn more about how they work. This is what we came up with. I ran and tested the program safely on my own network and device. 
+I asked Claude to help me build a lightweight, intrusion-detection-style packet sniffer written in Python with Scapy. It passively monitors network traffic and raises alerts on patterns associated with common network attacks: port scans, SYN floods, and ARP spoofing
