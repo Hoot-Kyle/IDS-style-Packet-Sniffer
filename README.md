@@ -2,7 +2,7 @@
 I asked Claude to help me build a lightweight, intrusion-detection-style packet sniffer written in Python with Scapy. It passively monitors network traffic and raises alerts on patterns associated with common network attacks: port scans, SYN floods, and ARP spoofing.
 
 Why this project?
-Most "packet sniffer" tutorials stop at printing captured packets. This project goes a step further by implementing actual detection logic — the same category of pattern-matching that commercial IDS/IPS tools use, just at a much smaller scale.
+Most "packet sniffer" tutorials stop at printing captured packets. This project goes a step further by implementing actual detection logic, which is the same category of pattern-matching that commercial IDS/IPS tools use, just at a much smaller scale.
 
 
 This project demonstrates:
